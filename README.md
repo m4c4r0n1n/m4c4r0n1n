@@ -2,7 +2,7 @@
 
 
 <p align="center">
-   I'm Chrome, I make things sometimes. 
+   I'm Chrome, welcome to my repo!
 </p>
 
 <p align="center">
