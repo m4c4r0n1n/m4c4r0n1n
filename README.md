@@ -7,6 +7,5 @@
 </p>
 
 <p align="center">
-
-  ### Take a look!
+ Take a look!
 </p>
