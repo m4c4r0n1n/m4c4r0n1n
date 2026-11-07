@@ -1,9 +1,9 @@
 <p align="center">
-# Welcome!
+ Welcome!
 </p>
 
 <p align="center">
-## I'm Chrome, I make things sometimes. 
+   I'm Chrome, I make things sometimes. 
 </p>
 
 <p align="center">
