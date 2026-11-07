@@ -1,6 +1,5 @@
-<p align="center">
- Welcome!
-</p>
+## Welcome!
+
 
 <p align="center">
    I'm Chrome, I make things sometimes. 
