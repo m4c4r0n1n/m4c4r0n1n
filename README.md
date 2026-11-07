@@ -6,4 +6,6 @@
   <img src="yuu.gif" alt="yuu" />
 </p>
 
+<p align="center">
 ### Take a look!
+</p>
