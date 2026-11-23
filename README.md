@@ -2,4 +2,4 @@
   <img src="yuu.gif" alt="yuu" />
 </p>
 
-Hello and welcome to the Github repository of Chrome. If you find something you like, please star the repo to let me know that it was useful to you; or if you have any complaints email me or open an issue. I hope you find something you like, and if not I'm sure you'll find something elsewhere that is! 🙂
+I don't give a fuck what you find useful or not. Not like you egotistical morons will star something without have claude steal it and claim it as your own. This is for me. Fuck off. 
