@@ -7,3 +7,5 @@ I don't give a fuck what you find useful or not. Not like you egotistical morons
 If this is NOT you and you find something ueseful, star it let me know. OTHERWISE, keep it fucking moving. Lurking like the pussy you are. 
 
  AND ANOTHER THING. I don't do follow for follow this ain't fucking 2000s myspace. Grow up. I follow if you've contirbuted something noteworthy. Don't follow expecting a follow back. Crypto morons and other losers, keep it pushin', nothing for you here.
+
+Tired of this loser ass community and what it's become. A lot of you are great, but I'm about done with all of this. 
