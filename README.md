@@ -2,7 +2,7 @@
   <img src="yuu.webp" alt="yuu" />
 </p>
 
-       I'm Chrome. Welcome to the repo. Find something you like, star it. If not, keep it pushin. 
+   I'm Chrome. Welcome to the repo. Find something you like, star it. If not, keep it pushin. 
 
 <h1 align="center">NixOS | Rust | Neovim | Full stack</h1>
 
