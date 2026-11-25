@@ -2,15 +2,7 @@
   <img src="yuu.webp" alt="yuu" />
 </p>
 
-I don't give a fuck what you find useful or not. Not like you egotistical morons will star something without having claude steal it and claim it as your own. This is for me. Fuck off. 
-
-If this is NOT you and you find something ueseful, star it let me know. OTHERWISE, keep it fucking moving. Lurking like the pussy you are. 
-
- AND ANOTHER THING. I don't do follow for follow this ain't fucking 2000s myspace. Grow up. I follow if you've contirbuted something noteworthy. Don't follow expecting a follow back. Crypto morons and other losers, keep it pushin', nothing for you here.
-
-Tired of this loser ass community and what it's become. A lot of you are great, but I'm about done with all of this. 
- 
- Follow if you wanna follow a real programmer. Star if you appreciate, otherwise keep it pushing. 
+I'm Chrome. Welcome to the repo. Find something you like, star it. If not, keep it pushin. 
 
 <h1 align="center">NixOS | Rust | Neovim | Full stack</h1>
 
