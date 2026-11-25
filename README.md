@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="yuu.gif" alt="yuu" />
+  <img src="yuu.webp" alt="yuu" />
 </p>
 
 I don't give a fuck what you find useful or not. Not like you egotistical morons will star something without having claude steal it and claim it as your own. This is for me. Fuck off. 
@@ -38,5 +38,5 @@ Tired of this loser ass community and what it's become. A lot of you are great, 
 ###
 <h2 align="center">Profile View</h2>
 <div align="center">
-  <img src="https://count.getloli.com/@:m4c4r0n1n?theme=booru-helltaker&padding=7&scale=1&align=top&pixelated=1&darkmode=auto" />
+  <img src="https://count.getloli.com/@:m4c4r0n1n?theme=booru-helltaker&padding=7&num=5432198&scale=1&align=top&pixelated=1&darkmode=auto" />
 </div>
