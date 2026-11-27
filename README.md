@@ -28,7 +28,7 @@
 </picture>
 
 ###
-<h2 align="center">Profile View</h2>
+<h2 align="center">Sup Hoes</h2>
 <div align="center">
   <img src="https://count.getloli.com/@:m4c4r0n1n?theme=booru-helltaker&padding=7&num=5432198&scale=1&align=top&pixelated=1&darkmode=auto" />
 </div>
