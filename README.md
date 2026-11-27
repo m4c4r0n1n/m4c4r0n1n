@@ -17,6 +17,15 @@
   </picture>
 </div>
 
+<br>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/m4c4r0n1n/m4c4r0n1n/footprint/footprint-dark.svg">
+    <img src="https://raw.githubusercontent.com/m4c4r0n1n/m4c4r0n1n/footprint/footprint-light.svg" alt="Technology footprint: every language I code in" width="720" />
+  </picture>
+</div>
+
 ###
 
 <br clear="both">
