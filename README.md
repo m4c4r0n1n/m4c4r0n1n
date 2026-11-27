@@ -39,7 +39,7 @@
 ###
 <h2 align="center">Sup</h2>
 <div align="center">
-  <img src="https://count.getloli.com/@:m4c4r0n1n?theme=booru-helltaker&padding=7&num=5432198&scale=1&align=top&pixelated=1&darkmode=auto" />
+  <img src="https://count.getloli.com/@:m4c4r0n1n?theme=booru-helltaker&padding=7&num=4684307&scale=1&align=top&pixelated=1&darkmode=auto" />
 </div>
 
 <h2 align="center">HELL YEAH I STOLE THIS, HELL NO THESE NUMBERS DON'T MEAN SHIT.</h2>
