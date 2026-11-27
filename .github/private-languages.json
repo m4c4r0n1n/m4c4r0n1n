@@ -1,0 +1,15 @@
+[
+  {
+    "languages": {
+      "JavaScript": 2706907,
+      "CSS": 32430,
+      "Shell": 26823,
+      "Python": 26630,
+      "HTML": 22797,
+      "Nix": 2394,
+      "Dockerfile": 1197,
+      "Batchfile": 404,
+      "WebAssembly": 23933
+    }
+  }
+]

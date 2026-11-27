@@ -54,6 +54,11 @@ async function repos(own = Boolean(process.env.FOOTPRINT_TOKEN)) {
     const langs = await rest(`/repos/${r.full_name}/languages`, token);
     all.push({ name: r.name, isPrivate: r.private, languages: { edges: Object.entries(langs).map(([name, size]) => ({ size, node: { name, color: paint.get(name) || null } })) } });
   }
+  try {
+    for (const p of JSON.parse(fs.readFileSync('.github/private-languages.json', 'utf8'))) {
+      all.push({ name: 'private', isPrivate: true, languages: { edges: Object.entries(p.languages).map(([name, size]) => ({ size, node: { name, color: paint.get(name) || null } })) } });
+    }
+  } catch {}
   console.log(`the token sees ${all.length} repos, ${all.filter((r) => r.isPrivate).length} of them private`);
   return { all, own };
 }
