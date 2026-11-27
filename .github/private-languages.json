@@ -11,5 +11,14 @@
       "Batchfile": 404,
       "WebAssembly": 23933
     }
+  },
+  {
+    "languages": {
+      "JavaScript": 128511,
+      "CSS": 13137,
+      "Shell": 13389,
+      "HTML": 9657,
+      "Dockerfile": 645
+    }
   }
 ]
