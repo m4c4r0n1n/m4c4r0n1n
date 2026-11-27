@@ -22,19 +22,39 @@ async function gql(query, variables, token = TOKEN) {
   return j.data;
 }
 
+async function rest(path, token) {
+  const r = await fetch(`https://api.github.com${path}`, { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'User-Agent': 'footprint' } });
+  if (!r.ok) throw new Error(`${r.status} ${(await r.text()).slice(0, 120)}`);
+  return r.json();
+}
+
+async function colors() {
+  const map = new Map();
+  for (const a of ALSO) map.set(a.name, a.color);
+  try {
+    const q = `query($l:String!){user(login:$l){repositories(first:100,ownerAffiliations:OWNER,privacy:PUBLIC){nodes{languages(first:100){nodes{name color}}}}}}`;
+    const d = await gql(q, { l: LOGIN }, process.env.GITHUB_TOKEN || TOKEN);
+    for (const r of d.user.repositories.nodes) for (const n of r.languages.nodes) if (n.color) map.set(n.name, n.color);
+  } catch {}
+  return map;
+}
+
 async function repos(own = Boolean(process.env.FOOTPRINT_TOKEN)) {
   const token = own ? process.env.FOOTPRINT_TOKEN : process.env.GITHUB_TOKEN || process.env.FOOTPRINT_TOKEN;
-  const q = own
-    ? `query($c:String){viewer{login repositories(first:100,after:$c,ownerAffiliations:OWNER,isFork:false){pageInfo{hasNextPage endCursor}nodes{name isPrivate languages(first:100){edges{size node{name color}}}}}}}`
-    : `query($c:String,$l:String!){user(login:$l){repositories(first:100,after:$c,ownerAffiliations:OWNER,isFork:false,privacy:PUBLIC){pageInfo{hasNextPage endCursor}nodes{name isPrivate languages(first:100){edges{size node{name color}}}}}}}`;
+  const list = [];
+  for (let page = 1; page < 20; page++) {
+    const path = own ? `/user/repos?affiliation=owner&visibility=all&per_page=100&page=${page}` : `/users/${LOGIN}/repos?type=owner&per_page=100&page=${page}`;
+    const batch = await rest(path, token);
+    list.push(...batch);
+    if (batch.length < 100) break;
+  }
+  const paint = await colors();
   const all = [];
-  let c = null;
-  do {
-    const d = await gql(q, own ? { c } : { c, l: LOGIN }, token);
-    const page = (own ? d.viewer : d.user).repositories;
-    all.push(...page.nodes);
-    c = page.pageInfo.hasNextPage ? page.pageInfo.endCursor : null;
-  } while (c);
+  for (const r of list.filter((x) => !x.fork)) {
+    const langs = await rest(`/repos/${r.full_name}/languages`, token);
+    all.push({ name: r.name, isPrivate: r.private, languages: { edges: Object.entries(langs).map(([name, size]) => ({ size, node: { name, color: paint.get(name) || null } })) } });
+  }
+  console.log(`the token sees ${all.length} repos, ${all.filter((r) => r.isPrivate).length} of them private`);
   return { all, own };
 }
 
