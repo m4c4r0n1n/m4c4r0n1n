@@ -1,0 +1,25 @@
+name: shuffle the counter
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  shuffle:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: new random number
+        run: |
+          n=$(shuf -i 1000000-9999999 -n 1)
+          sed -i -E "s/(count\.getloli\.com[^\"]*[?&]num=)[0-9]+/\1$n/" README.md
+          grep -q "num=$n" README.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -am "shuffle the counter" && git push -q || true
