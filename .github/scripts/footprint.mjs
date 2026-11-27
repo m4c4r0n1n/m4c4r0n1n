@@ -7,7 +7,7 @@ const ALSO = [
   { name: 'SQL', color: '#e38c00' },
   { name: 'Dockerfile', color: '#384d54' },
   { name: 'Assembly', color: '#6E4C13' },
-  { name: 'Binary', color: '#8b949e' },
+  { name: 'WebAssembly', color: '#04133b' },
 ];
 const SKIP = new Set((process.env.SKIP || '').split(',').map((s) => s.trim()).filter(Boolean));
 
@@ -60,11 +60,17 @@ async function repos(own = Boolean(process.env.FOOTPRINT_TOKEN)) {
 
 function totals(list) {
   const m = new Map();
+  const seen = new Set();
   for (const r of list) {
-    for (const e of r.languages.edges) {
-      if (SKIP.has(e.node.name)) continue;
+    const edges = r.languages.edges.filter((e) => !SKIP.has(e.node.name));
+    const total = edges.reduce((s, e) => s + e.size, 0);
+    if (!total) continue;
+    for (const e of edges) {
+      const key = `${e.node.name}=${e.size}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
       const cur = m.get(e.node.name) || { name: e.node.name, color: e.node.color || '#8b949e', size: 0 };
-      cur.size += e.size;
+      cur.size += e.size / total;
       m.set(e.node.name, cur);
     }
   }
