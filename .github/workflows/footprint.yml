@@ -35,6 +35,7 @@ jobs:
 
       - name: publish to the footprint branch
         run: |
+          [ -f dist/footprint-dark.svg ] || exit 0
           cd dist
           git init -q -b footprint
           git config user.name "github-actions[bot]"

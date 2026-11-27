@@ -96,8 +96,8 @@ ${legend}
 let found;
 try { found = await repos(); } catch (e) {
   if (!process.env.FOOTPRINT_TOKEN) throw e;
-  console.log(`private repos skipped, the token did not work: ${e.message.slice(0, 120)}`);
-  found = await repos(false);
+  console.log(`the token did not work, so the last card stays: ${e.message.slice(0, 120)}`);
+  process.exit(0);
 }
 const { all, own } = found;
 const langs = totals(all);
